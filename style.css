@@ -1,0 +1,140 @@
+/* Use a modern, easy-to-read font */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e6f7fa; /* light blue background for calmness */
+}
+
+/* Style the CTA banner section */
+.cta-banner {
+  background-image: url('img/cta-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(30, 144, 163, 0.85); /* fallback color */
+  color: #ffffff; /* white text for contrast */
+  padding: 60px 20px; /* tall and spacious */
+  text-align: center;
+  position: relative;
+}
+
+/* Add a light overlay to the banner */
+.cta-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 144, 163, 0.85); /* teal-blue with opacity */
+  z-index: 0;
+}
+
+/* Make sure the content stays above the overlay */
+.cta-banner > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Style the main heading */
+.cta-banner h1 {
+  font-size: 2.5em; /* large heading */
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Style the description text */
+.cta-banner p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style the call-to-action button */
+.cta-button {
+  display: inline-block;
+  background-color: #38d9c1; /* bright teal for attention */
+  color: #1e3a4c; /* dark blue text for readability */
+  padding: 15px 35px;
+  font-size: 1.1em;
+  text-decoration: none;
+  border-radius: 5px; /* slightly rounded corners */
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(30, 58, 76, 0.12); /* subtle shadow */
+  transition: background-color 0.2s;
+}
+
+/* Change button color on hover for interactivity */
+.cta-button:hover {
+  background-color: #2bb3a3;
+  color: #ffffff;
+}
+
+/* Style for the site header */
+.site-header {
+  background-color: #1e3a4c; /* dark blue for contrast */
+  color: #ffffff;
+  padding: 18px 0;
+  text-align: center;
+}
+
+/* Style for the site name */
+.site-header h2 {
+  margin: 0;
+  font-size: 1.7em;
+  letter-spacing: 2px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: bold;
+}
+
+/* Info section with two columns */
+.info-section {
+  max-width: 800px;
+  margin: 40px auto 0 auto; /* center the section */
+  padding: 20px;
+  background-color: #f0fbfd; /* very light blue for contrast */
+  border-radius: 8px;
+  display: table; /* use table layout for simple columns */
+  width: 100%;
+}
+
+/* Image column */
+.info-image {
+  display: table-cell;
+  width: 100%;
+  max-width: 400px;
+  vertical-align: middle;
+  border-radius: 16px; /* more visible rounded corners */
+  margin-right: 20px;
+}
+
+/* Text column */
+.info-text {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+  padding-left: 24px;
+  color: #1e3a4c;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 600px) {
+  .info-section {
+    display: block;
+    text-align: center;
+  }
+  .info-image,
+  .info-text {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto 20px auto;
+  }
+  .info-text {
+    padding-left: 0;
+  }
+}
