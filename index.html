@@ -6,6 +6,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Menu button -->
+  <button class="menu-btn" id="menuBtn" onclick="openSidebar()" aria-label="Open menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <!-- Sidebar navigation -->
+  <nav class="sidebar" aria-label="Sidebar menu" id="sidebarNav">
+    <button class="close-btn" onclick="closeSidebar()" aria-label="Close menu">&times;</button>
+    <a href="#" class="sidebar-link">Events</a>
+    <a href="#" class="sidebar-link">Learn More</a>
+    <a href="#" class="sidebar-link">Contact</a>
+  </nav>
+
   <header class="site-header">
     <h2>PetQuest</h2>
   </header>
@@ -28,5 +43,21 @@
       </p>
     </article>
   </section>
+
+  <script>
+    // Show sidebar and hide menu button
+    function openSidebar() {
+      document.getElementById('sidebarNav').style.left = '0';
+      document.getElementById('menuBtn').classList.add('hide');
+    }
+    // Hide sidebar and show menu button
+    function closeSidebar() {
+      document.getElementById('sidebarNav').style.left = '-220px';
+      document.getElementById('menuBtn').classList.remove('hide');
+    }
+  </script>
+  <footer>
+    <p>Contact us: info@petquest.com | Phone: (123) 456-7890</p>
+  </footer>
 </body>
 </html>
